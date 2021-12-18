@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Activity Lifecycle CC1</string>
+    <string name="activity2_name">CC1 Second Activity</string>
+    <string name="shopping_list_header">Shopping list</string>
+    <string name="add_item">Add Item</string>
+    <string name="item_list">Item list</string>
+    <string name="apple">Apple</string>
+    <string name="orange">Orange</string>
+    <string name="grape">Grape</string>
+    <string name="mango">Mango</string>
+</resources>
