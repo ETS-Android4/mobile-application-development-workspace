@@ -45,4 +45,8 @@
     <string name="action_status_message">You selected Status.</string>
     <string name="action_favorites_message">You selected Favorites.</string>
     <string name="action_contact_message">You selected Contact.</string>
+    <string name="date_pickup">Date Pickup</string>
+    <string name="datepicker">datePicker</string>
+    <string name="date_message">"Date: "</string>
+
 </resources>
