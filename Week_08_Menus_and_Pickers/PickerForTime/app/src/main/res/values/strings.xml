@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Picker For Time</string>
+    <string name="head_text">Hello World! Choose a time:</string>
+    <string name="time">Time</string>
+    <string name="timepicker">timePicker</string>
+    <string name="time_message">"Time: "</string>
+</resources>
