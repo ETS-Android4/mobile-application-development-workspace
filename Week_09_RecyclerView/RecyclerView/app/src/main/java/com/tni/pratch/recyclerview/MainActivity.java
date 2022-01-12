@@ -88,14 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 mWordList.addLast("Word " + (i + 1));
             }
 
-            // Get a handle to the RecyclerView.
-            mRecyclerView = findViewById(R.id.recyclerview);
-            // Create an adapter and supply the data to be displayed.
-            mAdapter = new WordListAdapter(this, mWordList);
-            // Connect the adapter with the RecyclerView.
-            mRecyclerView.setAdapter(mAdapter);
-            // Give the RecyclerView a default layout manager.
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            // Notify the adapter, that the data has changed.
+            mRecyclerView.getAdapter().notifyDataSetChanged();
+            // Scroll to the top.
+            mRecyclerView.smoothScrollToPosition(0);
         }
 
         return super.onOptionsItemSelected(item);
