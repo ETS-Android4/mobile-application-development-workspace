@@ -39,8 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        binding.fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
+        binding.fab.setOnClickListener(view -> {
+            int wordListSize = mWordList.size();
+            // Add a new word to the wordList.
+            mWordList.addLast("+ Word " + (wordListSize + 1));
+            // Notify the adapter, that the data has changed.
+            mRecyclerView.getAdapter().notifyItemInserted(wordListSize);
+            // Scroll to the bottom.
+            mRecyclerView.smoothScrollToPosition(wordListSize);
+        });
 
         // Put initial data into the word list.
         for (int i = 0; i < 20; i++) {
