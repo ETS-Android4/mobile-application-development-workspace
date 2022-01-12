@@ -79,8 +79,23 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_reset) {
+            // Clear list
+            mWordList.clear();
+
+            // Put initial data into the word list.
+            for (int i = 0; i < 20; i++) {
+                mWordList.addLast("Word " + (i + 1));
+            }
+
+            // Get a handle to the RecyclerView.
+            mRecyclerView = findViewById(R.id.recyclerview);
+            // Create an adapter and supply the data to be displayed.
+            mAdapter = new WordListAdapter(this, mWordList);
+            // Connect the adapter with the RecyclerView.
+            mRecyclerView.setAdapter(mAdapter);
+            // Give the RecyclerView a default layout manager.
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
 
         return super.onOptionsItemSelected(item);
