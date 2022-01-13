@@ -80,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_reset) {
+
+            // recreate();
+
             // Clear list
             mWordList.clear();
 
@@ -92,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.getAdapter().notifyDataSetChanged();
             // Scroll to the top.
             mRecyclerView.smoothScrollToPosition(0);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
