@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recipe_name">
+        <item>Chocolate Mint Bars</item>
+        <item>Blueberry Cupcakes</item>
+        <item>Fudge Walnut Brownies</item>
+        <item>Lemon Cake</item>
+        <item>Blueberry Peach Cobbler</item>
+        <item>Texas Sheet Cake</item>
+        <item>Espresso Crinkles</item>
+        <item>Chocolate Cherry Cookies</item>
+        <item>Vanilla Cheesecake</item>
+        <item>Tiramisu</item>
+        <item>Carrot Cake</item>
+        <item>Blueberry Ice Cream</item>
+    </string-array>
+
+    <string-array name="recipe_intro">
+        <item>@string/recipe_intro_0</item>
+        <item>@string/recipe_intro_1</item>
+        <item>@string/recipe_intro_2</item>
+        <item>@string/recipe_intro_3</item>
+        <item>@string/recipe_intro_4</item>
+        <item>@string/recipe_intro_5</item>
+        <item>@string/recipe_intro_6</item>
+        <item>@string/recipe_intro_7</item>
+        <item>@string/recipe_intro_8</item>
+        <item>@string/recipe_intro_9</item>
+        <item>@string/recipe_intro_10</item>
+        <item>@string/recipe_intro_11</item>
+    </string-array>
+
+    <string name="recipe_intro_0">You\'ll love these if you\'re a big fan of thin chocolate mint Girl Scout cookies. The dense base layer is a rich fudgy brownie.</string>
+    <string name="recipe_intro_1">Lemon and blueberry flavors give these cupcakes a great taste. Blueberries or fresh, edible flowers make an easy, pretty decoration.</string>
+    <string name="recipe_intro_2">These brownies are rich in cocoa, melted chocolate and chocolate chunks.</string>
+    <string name="recipe_intro_3">This lemon cake recipe trims the fat and calories while still retaining the moist lemony quality.</string>
+    <string name="recipe_intro_4">Use fresh blueberries and peaches that aren\'t super ripe for this cobbler recipe so they\'ll hold their shape when cooked.</string>
+    <string name="recipe_intro_5">This class Texas sheet cake recipe features a homemade chocolate cake layer topped with chocolate frosting and chopped toasted pecans.  Its rectangular shape makes this cake perfect for serving to a crowd.</string>
+    <string name="recipe_intro_6">These cookies are flavored with espresso.</string>
+    <string name="recipe_intro_7">Chocolate and cherry flavours mixed together. Using bittersweet chocolate, the sugar is reduced and the cookies get a deeper flavor.</string>
+    <string name="recipe_intro_8">This cheesecake comes with cherry toppings.</string>
+    <string name="recipe_intro_9">Easy and delicious recipe to make real tiramisu.</string>
+    <string name="recipe_intro_10">Moist, light, fluffy, and low calorie carrot cake recipe.</string>
+    <string name="recipe_intro_11">Cool off on a hot day with a big bowl of creamy homemade ice cream. Perfect for entertaining, this five-star recipe makes enough for a crowd.</string>
+
+</resources>
