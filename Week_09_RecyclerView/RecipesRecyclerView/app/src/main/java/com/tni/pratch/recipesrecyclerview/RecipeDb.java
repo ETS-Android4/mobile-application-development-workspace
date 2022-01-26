@@ -27,7 +27,7 @@ public class RecipeDb {
         String mDescription = res.getString(R.string.lorem);
         ArrayList<Drawable> mImage = new ArrayList<>();
 
-        mImage.add(ResourcesCompat.getDrawable(res, R.drawable.chocolate_cherry_cookies, null));
+        mImage.add(ResourcesCompat.getDrawable(res, R.drawable.chocolate_mint_bar, null));
         mImage.add(ResourcesCompat.getDrawable(res, R.drawable.blueberry_cupcakes, null));
         mImage.add(ResourcesCompat.getDrawable(res, R.drawable.fudge_brownies, null));
         mImage.add(ResourcesCompat.getDrawable(res, R.drawable.lemon_cake, null));
