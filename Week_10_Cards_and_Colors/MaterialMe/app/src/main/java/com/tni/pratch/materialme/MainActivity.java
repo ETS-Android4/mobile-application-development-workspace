@@ -2,6 +2,7 @@ package com.tni.pratch.materialme;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -101,4 +102,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 
+    public void resetSport(View view) {
+        initializeData();
+    }
 }
