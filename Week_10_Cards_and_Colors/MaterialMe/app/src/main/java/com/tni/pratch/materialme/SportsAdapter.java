@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -78,6 +81,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     class ViewHolder extends RecyclerView.ViewHolder {
 
         // Member Variables for the TextViews
+        private ImageView mSportsImage;
         private TextView mTitleText;
         private TextView mInfoText;
 
@@ -90,6 +94,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             super(itemView);
 
             // Initialize the views.
+            mSportsImage = itemView.findViewById(R.id.sportsImage);
             mTitleText = itemView.findViewById(R.id.title);
             mInfoText = itemView.findViewById(R.id.subTitle);
         }
@@ -98,7 +103,8 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             // Populate the textviews with data.
             mTitleText.setText(currentSport.getTitle());
             mInfoText.setText(currentSport.getInfo());
-
+            Glide.with(mContext).load(currentSport.getImageResource())
+                    .into(mSportsImage);
         }
     }
 }
