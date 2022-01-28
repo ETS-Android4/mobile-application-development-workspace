@@ -18,13 +18,23 @@ public class DetailActivity extends AppCompatActivity {
         // Initialize the views.
         TextView sportsTitle = findViewById(R.id.titleDetail);
         ImageView sportsImage = findViewById(R.id.sportsImageDetail);
+        TextView sportsDetail = findViewById(R.id.subTitleDetail);
 
+//        // Set the text from the Intent extra.
+//        sportsTitle.setText(getIntent().getStringExtra("title"));
+//
+//        // Load the image using the Glide library and the Intent extra.
+//        Glide.with(this).load(getIntent().getIntExtra("image_resource",0))
+//                .into(sportsImage);
+
+        Sport selectedSport = getIntent().getParcelableExtra("selectedSport");
         // Set the text from the Intent extra.
-        sportsTitle.setText(getIntent().getStringExtra("title"));
+        sportsTitle.setText(selectedSport.getTitle());
 
         // Load the image using the Glide library and the Intent extra.
-        Glide.with(this).load(getIntent().getIntExtra("image_resource",0))
+        Glide.with(this).load(selectedSport.getImageResource())
                 .into(sportsImage);
 
+        sportsDetail.setText(selectedSport.getDetails());
     }
 }
