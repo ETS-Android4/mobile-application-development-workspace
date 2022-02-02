@@ -5,7 +5,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
-import java.util.Arrays;
 import java.util.Random;
 
 public class SimpleAsyncTask extends AsyncTask<Void, Integer, String> {
