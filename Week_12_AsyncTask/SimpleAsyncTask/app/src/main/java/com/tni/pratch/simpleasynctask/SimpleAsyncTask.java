@@ -11,7 +11,7 @@ import java.util.Random;
 public class SimpleAsyncTask extends AsyncTask<Void, Integer, String> {
     private WeakReference<TextView> mTextView;
     private WeakReference<ProgressBar> mProgressBar;
-    private static final int CHUNK_SIZE = 10;
+    private static final int CHUNK_SIZE = 100;
 
     SimpleAsyncTask(TextView tv, ProgressBar pb) {
         mTextView = new WeakReference<>(tv);
@@ -29,14 +29,14 @@ public class SimpleAsyncTask extends AsyncTask<Void, Integer, String> {
         int s = n * 200;
 
         int chunkSize = s / CHUNK_SIZE;
-        for (int i = 0; i < CHUNK_SIZE; ++i){
+        for (int i = 0; i < chunkSize; ++i){
             try {
-                Thread.sleep(chunkSize);
+                Thread.sleep(CHUNK_SIZE);
             }
             catch (InterruptedException e){
                 e.printStackTrace();
             }
-            publishProgress(s, ((i + 1) * 100) / CHUNK_SIZE);
+            publishProgress(s - ((i + 1) * CHUNK_SIZE), ((i + 1) * 100) / chunkSize);
         }
 
         // Return a String result
