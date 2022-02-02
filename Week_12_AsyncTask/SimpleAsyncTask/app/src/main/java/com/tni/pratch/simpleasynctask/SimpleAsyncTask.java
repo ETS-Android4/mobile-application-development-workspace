@@ -4,9 +4,10 @@ import android.os.AsyncTask;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
+import java.util.Arrays;
 import java.util.Random;
 
-public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
+public class SimpleAsyncTask extends AsyncTask<Void, Integer, String> {
     private WeakReference<TextView> mTextView;
 
     SimpleAsyncTask(TextView tv) {
@@ -25,6 +26,8 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
 
         // Sleep for the random amount of time
         try {
+            // Call this to update progress
+            publishProgress(s);
             Thread.sleep(s);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -32,6 +35,13 @@ public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
 
         // Return a String result
         return "Awake at last after sleeping for " + s + " milliseconds!";
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        super.onProgressUpdate(values);
+        String remain = "Remaining..." + values[0] + " milliseconds";
+        mTextView.get().setText(remain);
     }
 
     @Override
