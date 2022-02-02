@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 /**
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TEXT_STATE = "currentText";
     // The TextView where we will show results
     private TextView mTextView;
+    // The progress bar there we will show the progress status
+    private ProgressBar mProgressBar;
 
     // Initializes the activity.
     @Override
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize mTextView
         mTextView = findViewById(R.id.textView1);
+        // Initialize mProgressBar
+        mProgressBar = findViewById(R.id.progressBar);
 
         // Restore TextView if there is a savedInstanceState
         if (savedInstanceState != null) {
@@ -38,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Put a message in the text view
         mTextView.setText(R.string.napping);
         // Start the AsyncTask.
-        new SimpleAsyncTask(mTextView).execute();
+        new SimpleAsyncTask(mTextView, mProgressBar).execute();
     }
 
     // Saves the contents of the TextView to restore on configuration
