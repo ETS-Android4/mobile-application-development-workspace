@@ -24,10 +24,10 @@ public class SimpleAsyncTask extends AsyncTask<Void, Integer, String> {
         // time to rotate the phone while it is running
         int s = n * 200;
 
+        publishProgress(s);
         // Sleep for the random amount of time
         try {
             // Call this to update progress
-            publishProgress(s);
             Thread.sleep(s);
         } catch (InterruptedException e) {
             e.printStackTrace();
