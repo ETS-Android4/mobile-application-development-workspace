@@ -3,6 +3,7 @@ package com.tni.pratch.howfastareyou;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -30,12 +31,18 @@ public class MainActivity extends AppCompatActivity {
 
         // init reset score
         score_tv.setText(R.string.zero);
+        // hide click mew button
+        click_me_btn.setVisibility(View.GONE);
 
         start_btn.setOnClickListener(view -> {
+            // toggle btn
+            start_btn.setVisibility(View.GONE);
+            click_me_btn.setVisibility(View.VISIBLE);
+
             // reset score
             cur_score = 0;
             score_tv.setText(R.string.zero);
-            new startCountingTask(pb).execute();
+            new startCountingTask(pb, start_btn, click_me_btn).execute();
         });
 
         click_me_btn.setOnClickListener(view -> {
